@@ -6,5 +6,4 @@ document.querySelector(".no-copy")
 
 document.addEventListener("selectionchange", e => {
     window.getSelection().empty();
-    alert("Protected content");
 });
