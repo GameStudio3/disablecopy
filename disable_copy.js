@@ -4,5 +4,8 @@ document.querySelector(".no-copy")
   e.preventDefault();
 }); // doesn't work against extension (but works without it)
 
-document.addEventListener("selectionchange", e => window.getSelection().empty());
+$(".no-copy").addEventListener("copy", e => {
+    e.clipboardData.setData("text/plain", "No Copying!");
+    e.preventDefault();
+});
 
